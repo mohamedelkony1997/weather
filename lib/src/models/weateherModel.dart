@@ -12,15 +12,15 @@ class Weather {
   });
 
   factory Weather.fromJson(Map<String, dynamic> json) {
-    // Parse daily forecasts from JSON and create Forecast objects
+ 
     List<Forecast> forecasts = (json['list'] as List)
         .map((forecastData) => Forecast.fromJson(forecastData))
         .toList();
 
     return Weather(
       city: json['city']['name'],
-      temperature: forecasts.first.temperature, // You can use the temperature of the first forecast as the current temperature
-      weatherCondition: forecasts.first.weatherCondition, // Use the weather condition of the first forecast
+      temperature: forecasts.first.temperature, 
+      weatherCondition: forecasts.first.weatherCondition,
       forecasts: forecasts,
     );
   }

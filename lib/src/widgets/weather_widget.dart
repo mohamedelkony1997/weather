@@ -10,7 +10,7 @@ class WeatherWidget extends StatelessWidget {
   WeatherWidget(this.weather);
 
   String getLottieAnimation() {
-    // Map weather conditions to Lottie animation names
+   
     switch (weather.weatherCondition.toLowerCase()) {
       case 'clear':
         return 'clear_day.json';
@@ -18,24 +18,23 @@ class WeatherWidget extends StatelessWidget {
         return 'cloudy.json';
       case 'rain':
         return 'rain.json';
-      // Add more cases for other weather conditions
+   
       default:
-        return 'default_animation.json'; // Default animation for unknown conditions
+        return 'default_animation.json'; 
     }
   }
 
   IconData getWeatherIcon() {
-    // Map weather conditions to Flutter icons
+   
     switch (weather.weatherCondition.toLowerCase()) {
       case 'clear':
         return Icons.wb_sunny;
       case 'clouds':
         return Icons.cloud;
       case 'rain':
-        return Icons.beach_access; // You can choose a rain-related icon
-      // Add more cases for other weather conditions
+        return Icons.beach_access; 
       default:
-        return Icons.error; // Default icon for unknown conditions
+        return Icons.error; 
     }
   }
 
