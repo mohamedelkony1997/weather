@@ -90,7 +90,7 @@ class WeatherWidget extends StatelessWidget {
               Lottie.asset(
                 'assets/animations/${getLottieAnimation()}',
                 height: 150,
-                width: 150,
+                width: 150, 
                 fit: BoxFit.fill,
               ),
               Text(
