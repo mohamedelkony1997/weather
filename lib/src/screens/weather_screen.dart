@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:weather/src/models/weateherModel.dart';
 import 'package:weather/src/services/weatherServices.dart';
 import 'package:weather/src/widgets/weather_widget.dart';
 
@@ -21,9 +20,10 @@ class HomeScreen extends ConsumerWidget {
         error: (error, stack) => Center(
           child: Text('Error: $error'),
         ),
-        data: (weather) => WeatherWidget(weather as Weather),
+        data: (weather) => WeatherWidget(weather),
       ),
-     
+      // Implement pull-to-refresh
+      // See: https://flutter.dev/docs/cookbook/networking/background-parsing#example
     );
   }
 }
